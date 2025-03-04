@@ -1,0 +1,124 @@
+/* 'Poppins', serif */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', serif;
+}
+
+:root {
+  --primary-color: rgb(0, 225, 187);
+  --secondary-color: rgb(5, 136, 114);
+  --header-color: rgba(255, 255, 255, 0.3);
+
+  --white-color: #fff;
+  --black-color: #000;
+
+  --white-color-thin: #ffffff7f;
+  --black-color-thin: #0000007b;
+
+  --site-max-width: 1200px;
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-background {
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color))
+}
+
+/* Header Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--header-color);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+header .header-container {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-container .header-left h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.header-container .header-left h2 b {
+  font-weight: 600;
+}
+
+.header-container .header-mid {
+  padding: 0 20px;
+}
+
+.header-mid .navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.navbar-list li {
+  cursor: pointer;
+}
+
+.navbar-list li::after {
+  display: block;
+  content: '';
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.2s ease;
+}
+
+.navbar-list li:hover::after {
+  width: 100%;
+}
+
+.header-container .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-right button {
+  border: none;
+  border-radius: 200px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  cursor: pointer;
+  box-shadow: 0 0 5px var(--black-color-thin);
+  transition: box-shadow 0.3s ease;
+}
+
+.header-right button:hover {
+  box-shadow: 0 0 15px var(--black-color-thin);
+}
+
+.header-right button.contact-button {
+  padding: 0.5rem 1rem;
+}
+
+.header-right button.dark-mode-button {
+  width: 41px;
+  height: 41px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
