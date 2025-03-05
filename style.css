@@ -10,7 +10,7 @@
 
 :root {
   --primary-color: rgb(0, 225, 187);
-  --secondary-color: rgb(5, 136, 114);
+  --secondary-color: rgb(9, 148, 125);
   --header-color: rgba(255, 255, 255, 0.3);
 
   --white-color: #fff;
@@ -29,7 +29,7 @@
 }
 
 .gradient-background {
-  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color))
+  background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
 }
 
 /* Header Styling */
@@ -82,7 +82,7 @@ header .header-container {
   width: 0;
   height: 2px;
   background: var(--primary-color);
-  transition: width 0.2s ease;
+  transition: width 0.3s ease;
 }
 
 .navbar-list li:hover::after {
@@ -103,7 +103,7 @@ header .header-container {
   color: var(--white-color);
   cursor: pointer;
   box-shadow: 0 0 5px var(--black-color-thin);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease-in;
 }
 
 .header-right button:hover {
@@ -121,4 +121,105 @@ header .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+/* Hero Section Styling */
+.hero-section {
+  margin-top: 82px;
+  height: calc(100vh - 82px);
+}
+
+.hero-section .hero-container {
+  max-width: var(--site-max-width);
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 7rem;
+  padding: 20px;
+}
+
+.hero-container .hero-container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  text-align: right;
+}
+
+.hero-container-left h1 {
+  font-size: 4rem;
+}
+
+.hero-container-left h2 {
+  font-size: 2rem;
+}
+
+.hero-container-left p {
+  font-size: 1rem;
+  max-width: 500px;
+  text-align: end;
+}
+
+.hero-container-left .socials-list {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.socials-list button {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.socials-list button:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+  box-shadow: 0 0 5px var(--black-color-thin);
+}
+
+.hero-container-left .hero-action button {
+  height: 3rem;
+  font-size: 1.3rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 100rem;
+  padding: 0 1.7rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-container-left .hero-action button:hover {
+  box-shadow: 0 0 5px var(--black-color-thin);
+}
+
+.hero-container .hero-container-right {
+  display: flex;
+  align-items: center;
+}
+
+.hero-container-right .hero-img {
+  background: url('assets/person.jpg');
+  background-size: cover;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100rem;
+  box-shadow: 0 0 15px var(--black-color-thin);
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-container-right .hero-img:hover {
+  box-shadow: 0 0 35px var(--black-color-thin);
 }
