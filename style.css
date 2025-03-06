@@ -509,6 +509,7 @@ header .header-container {
 .projects-section {
   height: 100vh;
   background: var(--white-color);
+  padding: 100px 0;
 }
 
 .projects-section .projects-grid {
