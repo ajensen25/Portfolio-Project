@@ -11,7 +11,7 @@
 :root {
   --primary-color: rgb(0, 225, 187);
   --secondary-color: rgb(9, 148, 125);
-  --header-color: rgba(255, 255, 255, 0.3);
+  --header-color: rgba(255, 255, 255, 0.5);
 
   --white-color: #fff;
   --black-color: #000;
@@ -145,7 +145,7 @@ header .header-container {
   height: 41px;
   padding: 0.5rem;
   font-size: 1.4rem;
-  color: var(--white-color);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,6 +202,7 @@ header .header-container {
 .hero-container-left .socials-list {
   display: flex;
   align-items: center;
+  height: 4rem;
   gap: 0.8rem;
 }
 
@@ -224,6 +225,8 @@ header .header-container {
   background: var(--primary-color);
   color: var(--white-color);
   box-shadow: 0 0 5px var(--black-color-thin);
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
 .hero-container-left .hero-action button {
@@ -248,7 +251,7 @@ header .header-container {
 }
 
 .hero-container-right .hero-img {
-  background: url('assets/person.jpg');
+  background: url('assets/me.jpg');
   background-size: cover;
   width: 30rem;
   height: 30rem;
@@ -283,7 +286,7 @@ header .header-container {
     height: 100vh;
     background: var(--white-color);
     width: 250px;
-    box-shadow: 0 0 10px var(--black-color-thin);
+    box-shadow: 0 0 20px var(--black-color-thin);
     transition: 0.3s ease;
   }
 
@@ -333,12 +336,90 @@ header .header-container {
     justify-content: center;
   }
   .hero-container-right .hero-img {
-    background: url('assets/person.jpg');
-    background-size: cover;
     width: 10rem;
     height: 10rem;
-    border-radius: 100rem;
     box-shadow: 0 0 15px var(--black-color-thin);
-    transition: box-shadow 0.3s ease;
   }
 } 
+
+
+/* About Section Styling */
+
+.about-section {
+  height: 100vh;
+  background: var(--white-color);
+}
+
+.about-section .about-container {
+  max-width: var(--site-max-width);
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 7rem;
+  padding: 20px;
+}
+
+.about-container .about-container-left {
+  display: flex;
+  align-items: center;
+}
+
+.about-container-left .about-img {
+  background: url('assets/person.jpg');
+  background-size: cover;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100rem;
+  box-shadow: 0 0 15px var(--black-color-thin);
+  transition: box-shadow 0.3s ease;
+}
+
+.about-container-left .about-img:hover {
+  box-shadow: 0 0 35px var(--black-color-thin);
+}
+
+.about-container .about-container-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  text-align: start;
+  color: var(--black-color);
+}
+
+.about-container .about-container-right h1 {
+  font-size: 4rem;
+}
+
+.about-container .about-container-right p {
+  font-size: 1rem;
+  max-width: 500px;
+  text-align: start;
+}
+
+@media screen and (width <= 1100px) {
+  .about-section .about-container {
+    flex-direction: column;
+    padding: 100px 20px 20px 20px;
+    gap: 3rem;
+    margin: 0;
+    height: fit-content;
+  }
+  .about-container .about-container-right {
+    align-items: center;
+    text-align: center;
+  }
+  .about-container .about-container-right p {
+    max-width: 90%;
+    text-align: center;
+  }
+  .about-container .about-container-left {
+    justify-content: center;
+  }
+  .about-container-left .about-img {
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 0 0 15px var(--black-color-thin);
+  }
+}

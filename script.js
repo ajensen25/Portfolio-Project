@@ -30,6 +30,7 @@ darkModeButton.addEventListener('click', () => {
 })
 
 function toggleLightTheme() {
+  darkModeButton.querySelector('i').classList.replace('uil-moon', 'uil-sun');
   root.style.setProperty('--header-color', 'rgba(255, 255, 255, 0.3)');
   root.style.setProperty('--white-color', '#fff');
   root.style.setProperty('--black-color', '#000');
@@ -38,6 +39,7 @@ function toggleLightTheme() {
 }
 
 function toggleDarkTheme() {
+  darkModeButton.querySelector('i').classList.replace('uil-sun', 'uil-moon');
   root.style.setProperty('--header-color', 'rgba(50, 50, 50, 0.3)');
   root.style.setProperty('--white-color', 'rgb(50, 50, 50)');
   root.style.setProperty('--black-color', '#fff');
