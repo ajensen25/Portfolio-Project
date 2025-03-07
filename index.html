@@ -10,6 +10,16 @@
   <!--  -->
   <link rel="stylesheet" href="style.css">
   <title>Aiden's Portfolio</title>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "2LWXQJlOvM1Vta1MI",
+        });
+    })();
+  </script>
 </head>
 <body class="">
   <header class="">
@@ -191,6 +201,23 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="contact-section">
+    <h1>Contact <b class="gradient-text">Me</b></h1>
+    <form action="#">
+      <div class="form-left">
+        <input type="text" placeholder="John Doe" class="form-name" required>
+        <input type="email" placeholder="johndoe@gmail.com" class="form-email" required>
+        <input type="text" placeholder="Subject" class="form-subject" required>
+      </div>
+      <div class="form-right">
+        <textarea name="" id="" placeholder="Your message here" cols="30" rows="4" class="form-message" required></textarea>
+        <button class="submit-button">
+          Send Message
+        </button>
+      </div>
+    </form>
   </section>
 
   <script src="script.js"></script>
