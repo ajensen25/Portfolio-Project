@@ -8,6 +8,10 @@
   font-family: 'Poppins', serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: rgb(0, 225, 187);
   --secondary-color: rgb(9, 148, 125);
@@ -36,6 +40,11 @@ body {
 
 .gradient-background {
   background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header Styling */
@@ -453,7 +462,6 @@ header .header-container {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  cursor: pointer;
   transition: 0.3s ease;
   color: var(--black-color);
   box-shadow: 0 0 10px var(--black-color-thin);
